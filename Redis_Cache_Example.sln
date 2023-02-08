@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disturbed.Caching", "Disturbed.Caching\Disturbed.Caching.csproj", "{0914CB00-324B-4C8D-A9E5-39BDA30DE7BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemory.Caching", "InMemory.Caching\InMemory.Caching.csproj", "{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0914CB00-324B-4C8D-A9E5-39BDA30DE7BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0914CB00-324B-4C8D-A9E5-39BDA30DE7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0914CB00-324B-4C8D-A9E5-39BDA30DE7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0914CB00-324B-4C8D-A9E5-39BDA30DE7BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84DC1422-133A-4A76-96A1-50215EB3E5C9}
+	EndGlobalSection
+EndGlobal
