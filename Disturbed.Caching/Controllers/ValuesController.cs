@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Disturbed.Caching.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 using System.Text;
 
 namespace InMemory.Caching.Controllers
@@ -44,6 +46,26 @@ namespace InMemory.Caching.Controllers
             return Ok();
         }
 
+        [HttpPost("setObject")]
+        public async Task<IActionResult> SetObject(User user)
+        {
+            //Bu controller metodunda biz bir classı veyahut bir objeyi nasıl redis te saklayabiliyoruz. Buna değiniyor olacağız.
+
+            // JSON serileştirme ayarları
+            var settings = new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All
+            };
+
+            // Nesneyi JSON'a dönüştürme
+            string userJson = JsonConvert.SerializeObject(user, settings);
+
+            //Dönüştürülmüş user objesini redis e gönderiyoruz.
+            await _distributedCache.SetStringAsync("user", userJson, options: new());
+
+            return Ok();
+        }
+
         [HttpGet("get")]
         public async Task<IActionResult> Get()
         {
@@ -58,6 +80,24 @@ namespace InMemory.Caching.Controllers
                 name,
                 surname
             });
+        }
+
+        [HttpGet("getObject")]
+        public async Task<IActionResult> GetObject()
+        {
+            //GetString metodu ile metinsel verileri Redis üzerinden okuyabiliyoruz elde ediyoruz.
+            string? user = await _distributedCache.GetStringAsync("user");
+
+            // JSON verisini C# nesnesine dönüştürme
+            var settings = new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All
+            };
+
+            User? userObject = JsonConvert.DeserializeObject<User>(user, settings);
+
+            return Ok(userObject);
+
         }
     }
 }
