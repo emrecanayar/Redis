@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disturbed.Caching", "Disturbed.Caching\Disturbed.Caching.csproj", "{0914CB00-324B-4C8D-A9E5-39BDA30DE7BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Disturbed.Caching", "Disturbed.Caching\Disturbed.Caching.csproj", "{0914CB00-324B-4C8D-A9E5-39BDA30DE7BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemory.Caching", "InMemory.Caching\InMemory.Caching.csproj", "{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InMemory.Caching", "InMemory.Caching\InMemory.Caching.csproj", "{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce", "eCommerce\eCommerce.csproj", "{224D37FF-1E01-4FA5-BB48-4D0B37B1D3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA1A45CB-3C51-4E8D-95A1-C743A0A8C6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224D37FF-1E01-4FA5-BB48-4D0B37B1D3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224D37FF-1E01-4FA5-BB48-4D0B37B1D3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224D37FF-1E01-4FA5-BB48-4D0B37B1D3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224D37FF-1E01-4FA5-BB48-4D0B37B1D3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
